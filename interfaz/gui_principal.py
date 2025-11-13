@@ -1252,17 +1252,3 @@ class SimuladorGUI:
             height=35,
             font=("Arial Bold", 12)
         ).pack(pady=(10, 20))
-
-
-# Ejecución independiente para pruebas
-if __name__ == "__main__":
-    from config.constantes import RADIOFARMACOS, ESCALAS_TIEMPO
-    from modelos.simulacion import SimuladorDecaimiento
-    
-    ctk.set_appearance_mode("dark")
-    ctk.set_default_color_theme("blue")
-    
-    root = ctk.CTk()
-    simulador = SimuladorDecaimiento()
-    app = SimuladorGUI(root, RADIOFARMACOS, ESCALAS_TIEMPO, simulador)
-    root.mainloop()
